@@ -1,0 +1,35 @@
+.content {
+    font-size: 20px;
+    max-width: 600px;
+    font-family: 'Times New Roman', Times, serif;
+    justify-items: center;
+    text-align: center;
+    margin: 50px;
+    padding-left: 150px;
+    padding-right: 150px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    border: grey, solid, 1px;
+    line-height: 1.5;
+}
+
+header {
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    border-bottom: 1px solid grey;
+}
+
+h2 {
+    color: #006EB6;
+    font-size: 15px;
+    text-underline-offset: 10px;
+}
+
+p, li{ 
+    text-align: left;
+    
+}
+
+footer img{
+    width: 150px;
+}
