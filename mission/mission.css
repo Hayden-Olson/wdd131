@@ -1,4 +1,4 @@
-.content {
+#content {
     font-size: 20px;
     max-width: 600px;
     font-family: 'Times New Roman', Times, serif;
@@ -32,4 +32,13 @@ p, li{
 
 footer img{
     width: 150px;
+}
+
+.dark {
+    background-color: black;
+    color: white;
+}
+
+.dark h2 {
+    color: rgb(160, 212, 237);
 }
