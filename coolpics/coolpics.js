@@ -18,7 +18,7 @@ gallery.addEventListener("click",(event) => {
     let foo = event.target.closest('img');
     let filename = new URL(foo.src);
     let largefilename = filename.pathname.split('-')[0] + "-full.jpeg";
-    modal.innerHTML = `<div><button class='close-viewer'>X</button><img src="${largefilename}"></div>`;
+    modal.innerHTML = `<div><button class='close-viewer'>X</button><img src="${largefilename}" alt=${foo.alt}></div>`;
     modal.showModal();
 });
 
