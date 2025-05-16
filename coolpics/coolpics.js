@@ -16,8 +16,8 @@ menuButton.addEventListener('click', () => {
 const gallery = document.querySelector('.gallery');
 gallery.addEventListener("click",(event) => {
     let foo = event.target.closest('img');
-    let filename = foo.src;
-    let largefilename = filename.split('-')[0] + "-full.jpeg";
+    let filename = new URL(foo.src);
+    let largefilename = filename.pathname.split('-')[0] + "-full.jpeg";
     modal.innerHTML = `<div><button class='close-viewer'>X</button><img src="${largefilename}"></div>`;
     modal.showModal();
 });
