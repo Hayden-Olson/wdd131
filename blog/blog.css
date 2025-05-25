@@ -1,0 +1,43 @@
+body {
+    font-family: Helvetica, Arial, sans-serif;
+}
+/* 
+header {
+    grid-column: 1/5;
+    border-bottom: solid #EFC69B;
+    text-align: center;
+    margin: 10px;
+}
+nav {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    border-top: solid #EFC69B;
+    padding: 20px;
+    grid-column: 1/4;
+    justify-content: flex-end;
+    font-size: 20px;
+}
+
+h1, h2 {
+    font-family: Lora, Impact, serif;
+}
+
+h2, a, button {
+    color: #AF1B3F;
+}
+
+.book {
+    grid-column: 1/4;
+}
+
+.book_information{
+    display: grid;
+}
+
+.book_description {
+    display: grid;
+}
+
+.filter {
+    grid-column: 4/5;
+} */
