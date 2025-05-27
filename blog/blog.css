@@ -18,12 +18,20 @@ nav {
     font-size: 20px;
 }
 
+nav a {
+    text-decoration: none;
+}
+
 h1, h2 {
     font-family: Lora, Impact, serif;
 }
 
 h2, a, button {
     color: #AF1B3F;
+}
+
+main h2 {
+    font-size: 40px;
 }
 
 main {
@@ -37,13 +45,21 @@ main {
 }
 
 .book_information{
-    display: grid;
+    text-align: right;
+    padding: 20px;
+    border-right:solid #EFC69B;
 }
 
 .book_description {
-    display: grid;
+    text-align: left;
+    padding: 20px;
+}
+
+.picture {
+    text-align: center;
 }
 
 .filter {
-    grid-column: 4/5;
+    grid-column: 2/3;
+    border: solid #EFC69B;
 }
