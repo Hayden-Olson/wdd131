@@ -39,20 +39,45 @@ const articles = [
 	}
 ]
 
-let id = articles[0];
-let title = articles[1];
-let date = articles[2];
-let description = articles[3];
-let imgSrc = articles[4];
-let imgAlt = articles[5];
-let ages = articles[6];
-let genre = articles[7];
-let stars = articles[8];
+for (const article of articles) {
+	const book = document.createElement("div")
+	book.classList.add("book")
 
-articles.forEach(item) {
-	if (item in (date, age, genre, stars)) {
-		document.createElement("p")
-	} else if (item in (title, imgSrc, imgAlt, description)) {
+	book.id = article.id
 
-	}
+	// This is the book information
+	const book_information = document.createElement("div")
+	book_information.classList.add("book_information")
+
+	const date = document.createElement("p")
+	date.textContent = article.date
+	const ages = document.createElement("p")
+	ages.textContent = article.ages
+	const genre = document.createElement("p")
+	genre.textContent = article.genre
+	const stars = document.createElement("p")
+	stars.textContent = article.stars
+	book_information.append(date,ages,genre,stars)
+
+	// This is the book description
+	const book_description = document.createElement("div")
+	book_description.classList.add("book_description")
+	
+	const title = document.createElement("h2")
+	title.textContent = article.title
+
+	const picture = document.createElement("div")
+	picture.classList.add("picture")
+	const image = document.createElement("img")
+	image.src = article.imgSrc
+	image.alt = article.imgAlt
+	picture.append(image)
+
+	const description = document.createElement("p")
+	description.textContent = article.description
+	book_description.append(title,picture,description)
+
+	book.append(book_information,book_description)
+	const main = document.getElementsByTagName("main")[0]
+	main.append(book)
 };
