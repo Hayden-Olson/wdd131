@@ -1,7 +1,7 @@
 body {
     font-family: Helvetica, Arial, sans-serif;
 }
-/* 
+
 header {
     grid-column: 1/5;
     border-bottom: solid #EFC69B;
@@ -10,7 +10,7 @@ header {
 }
 nav {
     display: grid;
-    grid-template-columns: repeat(3,1fr);
+    grid-template-columns: repeat(3,100px);
     border-top: solid #EFC69B;
     padding: 20px;
     grid-column: 1/4;
@@ -26,8 +26,14 @@ h2, a, button {
     color: #AF1B3F;
 }
 
+main {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+}
+
 .book {
-    grid-column: 1/4;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
 }
 
 .book_information{
@@ -40,4 +46,4 @@ h2, a, button {
 
 .filter {
     grid-column: 4/5;
-} */
+}
