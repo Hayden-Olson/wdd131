@@ -68,4 +68,5 @@ h3 {
 .filter {
     grid-column: 2/3;
     border: solid #EFC69B;
+    text-align: center;
 }
