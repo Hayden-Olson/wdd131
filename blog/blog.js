@@ -49,7 +49,7 @@ for (const article of articles) {
 	const book_information = document.createElement("div")
 	book_information.classList.add("book_information")
 
-	const date = document.createElement("p")
+	const date = document.createElement("h3")
 	date.textContent = article.date
 	const ages = document.createElement("p")
 	ages.textContent = article.ages
@@ -81,3 +81,6 @@ for (const article of articles) {
 	const main = document.getElementsByTagName("main")[0]
 	main.append(book)
 };
+
+const filter = document.querySelector(".filter")
+filter.style.gridRow = `1 / ${articles.length + 1}`;
