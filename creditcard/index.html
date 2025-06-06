@@ -11,7 +11,8 @@
     <script defer src="card.js"></script>
 </head>
 <body>
-    <form action="">
+    <form action="" id="credit-card">
+        
         <section class="cardfront">
             <label class="total"for="total">Total: $199</label><br>
             <img
@@ -20,28 +21,29 @@
             height="55px">
             <div class="cardnum">
                 <label for="cardnum">CARD NUMBER</label><br>
-                <input type="text" id="cardnum" name="cardnum" placeholder="1234 1234 1234 1234"><br>
+                <input type="text" id="cardnum" name="cardnum" placeholder="1234 1234 1234 1234" maxlength="16" required><br>
             </div>
             
             <div class="holder">
                 <label for="holder">CARD HOLDER</label><br>
-                <input type="text" id="holder" name="holder" placeholder="John Doe"><br>
+                <input type="text" id="holder" name="holder" placeholder="John Doe" required><br>
             </div>
             
             <div class="expiration">
                 <label for="expiration">EXPIRATION</label><br>
-                <input type="text" id="month" name="month" placeholder="MM"><br>
-                <input type="text" id="year" name="year" placeholder="YY"><br>
+                <input type="text" id="month" name="month" placeholder="MM" maxlength="2" required>
+                <input type="text" id="year" name="year" placeholder="YY" maxlength="2" required>
             </div>
         </section>
         <section class="cardback">
             <div class="block"></div>
             <div class="cvc">
                 <label id="cvc"for="cvc">CVC/CVV</label><br>
-                <input type="text" id="cvc" name="cvc" placeholder="XXX"><br>
+                <input type="text" id="cvc" name="cvc" placeholder="XXX" maxlength="3" required><br>
             </div>
         </section>
         <input class="submit"type="submit" value="Submit">
     </form>
+    <p hidden class="errorMsg"></p>
 </body>
 </html>

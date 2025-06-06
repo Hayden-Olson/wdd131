@@ -13,7 +13,7 @@ form {
 .expiration input, .cvc input {
     width: 30%;
     padding: 1px;
-    display: inline-block;
+    display: inline;
 }
 
 .cardfront {
