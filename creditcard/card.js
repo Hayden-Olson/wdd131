@@ -34,7 +34,6 @@ function submitHandler(event) {
 		displayError(errorMsg)
 		return false
 	}
-	console.log('success')
 	return true
 
 }
