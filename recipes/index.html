@@ -4,40 +4,64 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RecipeBook</title>
+    <meta property="og:title" content="Recipe Book">
+    <meta property="og:type" content="website" />
+    <meta property="og:description" content="Showcasing my favorite recipes!">
+    <meta property="og:image" content="URL to an image">
+    <meta property="og:url" content="URL of the page">
+    <meta name="twitter:card" content="summary_large_image">
     <link href="recipes.css" rel="stylesheet">
     <script defer src="recipes.js"></script>
 </head>
 <body>
     <header>
-        <img src="images/recipe-book.png" alt="Recipe Book Logo">
-        <!-- Will fill in value for option in js. -->
-        <datalist id="search_list"><option value=""></option></datalist>
-        <h1>RecipeBook</h1>
-        <div class="search">
-             <input type="search" label="Find a recipe">
-            <button><img src="images/search.svg" alt="Search"></button>
+        <div class="title">
+            <img src="images/recipe-book.png" alt="Recipe Book Logo">
+            <h1>RecipeBook</h1>
         </div>
     </header>
     <main>
+        <form action="submit" class="search">
+            <label for="search"></label>
+            <input type="search" placeholder="Find a recipe">
+            <button><img src="images/search.svg" alt="Search" style="height: 20px;" style="width: 20px;"></button>
+            <!-- Will fill in value for option in js. -->
+            <datalist id="search_list"><option value=""></option></datalist>
+        </form>
         <section>
             <article>
-                <img class="picture" src="" alt="">
+                <img class="picture" src="images/apple-crisp.jpg" alt="">
             </article>
             <div>
-                <span class="tag"></span>
-                <h2 class="name"></h2>
-                <p class="rating"></p>
+                <div class="tags">
+                    <span class="tag">dessert</span>
+                </div>
+                <h2 class="name">Apple Crisp</h2>
+                <span
+                    class="rating"
+                    role="img"
+                    aria-label="Rating: 4 out of 5 stars"
+                >
+                    <span aria-hidden="true" class="icon-star">⭐</span>
+                    <span aria-hidden="true" class="icon-star">⭐</span>
+                    <span aria-hidden="true" class="icon-star">⭐</span>
+                    <span aria-hidden="true" class="icon-star-empty">⭐</span>
+                    <span aria-hidden="true" class="icon-star-empty">☆</span>
+                </span>
+                <p class="description">
+                    This apple crisp recipe is a simple yet delicious falls dessert that's great served warm with vanilla ice cream.
+                </p>
             </div>
         </section>
     </main>
     <footer>
-        <a href="https://www.flaticon.com/free-icons/recipe" title="recipe icons">Recipe icons created by Freepik - Flaticon</a>
         <div class="social">
             <!-- Social media icons provided under CC from https://www.iconfinder.com/AlfredoCreates  -->
             <a href="#"><img src="images/instagram_icon.svg" alt="instagram icon"></a>
             <a href="#"><img src="images/youtube_icon.svg" alt="youtube icon"></a>
             <a href="#"><img src="images/pinterest_icon.svg" alt="pinterest icon"></a>
         </div>
+        <a href="https://www.flaticon.com/free-icons/recipe" title="recipe icons">Recipe icons created by Freepik - Flaticon</a>
     </footer>
 </body>
 </html>

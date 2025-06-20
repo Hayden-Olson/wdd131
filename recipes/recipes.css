@@ -12,6 +12,104 @@ img {
     max-width: 100%;
 }
 
+header {
+    display: flex;
+    justify-content: center;
+}
+
+.title {
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+}
+
+header img {
+    width: 150px;
+    justify-self: flex-end;
+}
+
 h1 {
     font-family: var(--secondary-font);
+    font-size: 80px;
+}
+
+form {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    border-bottom: 1px solid black;
+}
+
+form input {
+    flex-grow: 1;
+    border-radius: 10px 0px 0px 10px;
+}
+
+form button {
+    border-radius: 0px 10px 10px 0px;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    margin: 20px;
+    border: 1px solid black;
+    border-radius: 20px;
+}
+
+section .tag {
+    border: 1px solid black;
+    font-family: var(--primary-font);
+}
+
+section .name {
+    font-family: var(--secondary-font);
+    color: var(--primary-color);
+    font-size: 40px;
+    margin: 0;
+    margin-top: 10px;
+}
+
+.description {
+    visibility: hidden;
+    font-size: 1px;
+    font-family: var(--primary-font);
+}
+
+footer {
+    text-align: center;
+}
+
+footer .social{
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+}
+
+.social a img {
+    width: 60px;
+    height: auto;
+}
+
+footer a {
+    text-decoration: none;
+    color: var(--primary-color)
+}
+
+@media (min-width:600px) {
+    section {
+        flex-direction: row;
+        gap: 20px;
+    }
+    .description {
+        visibility: visible;
+        font-size: 15px;
+    }
+}
+
+@media (min-width:960px) {
+    body {
+        max-width: 960px;
+        justify-self: center;
+    }
 }
