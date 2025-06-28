@@ -280,17 +280,28 @@ const recipes = [
 	}
 ]
 function recipe(recipe) {
-    const card = document.createElement('section');
-    card.classList.add('recipe');
-
-    const picture = document.createElement('article');
-    const image = document.createElement('img');
-    image.classList.add('picture');
-    image.src = recipe.image;
-    image.alt = recipe.description;
-    picture.add(image);
-
-    
-
-    card.appendChild(picture);
+    return `<section class="recipe">
+                <article>
+                    <img class="picture" src="${recipe.image}" alt="${recipe.description}">
+                </article>
+                <div>
+				// Create function to add multiple tags using recipe.tags.length
+                    <div class="tags">
+                        <span class="tag">dessert</span>
+                    </div> 
+                    <h2 class="name">${recipe.name}</h2>
+					
+                    <span
+                        class="rating"
+                        role="img"
+                        aria-label="Rating: 4 out of 5 stars"
+                    >
+					// Create a function that creates five spans and gives and icon for the given rating number.
+                        
+                    </span>
+                    <p class="description">
+                        ${recipe.description}
+                    </p>
+                </div>
+            </section>`
 }
