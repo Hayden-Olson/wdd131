@@ -279,24 +279,29 @@ const recipes = [
 		rating: 4
 	}
 ]
-function recipe(recipe) {
+
+function random(num) {
+	return Math.floor(Math.random() * num)
+}
+
+function getRandomListEntry(list) {
+	const listLength = list.length;
+	const randomNum = random(listLength);
+	return list[randomNum];
+}
+
+function recipeTemplate(recipe) {
     return `<section class="recipe">
                 <article>
                     <img class="picture" src="${recipe.image}" alt="${recipe.description}">
                 </article>
                 <div>
 				// Create function to add multiple tags using recipe.tags.length
-                    <div class="tags">
-                        <span class="tag">dessert</span>
-                    </div> 
+					${tagsTemplate(recipe.tags.length)}
+                    
                     <h2 class="name">${recipe.name}</h2>
 					
-                    <span
-                        class="rating"
-                        role="img"
-                        aria-label="Rating: 4 out of 5 stars"
-                    >
-					// Create a function that creates five spans and gives and icon for the given rating number.
+                    ${ratingTemplate(recipe.rating)}
                         
                     </span>
                     <p class="description">
@@ -305,3 +310,77 @@ function recipe(recipe) {
                 </div>
             </section>`
 }
+
+function tagsTemplate(tags) {
+	// loop through the tags list and transform the strings to HTML
+	let html = `<div class="tags">
+        <span class="tag">`
+	for (const tag in tags) {
+		html += tag
+	}
+    html += `</span>
+		</div>`
+	return html;
+}
+
+function ratingTemplate(rating) {
+	// begin building an html string using the ratings HTML written earlier as a model.
+	let html = `<span
+	class="rating"
+	role="img"
+	aria-label="Rating: ${rating} out of 5 stars"
+>`
+// our ratings are always out of 5, so create a for loop from 1 to 5
+	for (let index=0; i<=5; i++) {
+		if (index <= rating) {
+			html += "⭐"
+		} else {
+			html += "☆"
+		}
+	}
+		
+	// after the loop, add the closing tag to our string
+	html += `</span>`
+	// return the html string
+	return html
+}
+
+function renderRecipes(recipeList) {
+	// get the element we will output the recipes into
+	const recipeContainer = `<section id="recipes">`
+	// use the recipeTemplate function to transform our recipe objects into recipe HTML strings
+	for (const recipe of recipeList) {
+		recipeContainer += recipeTemplate(recipe)
+	};
+	
+	// Set the HTML strings as the innerHTML of our output element.
+	recipeContainer += `</section>`
+}
+
+function filter(query) {
+	const filtered = recipes.filter(filterFunction)
+	// sort by name
+	const sorted = filtered.sort(sortFunction)
+		return sorted
+
+}
+
+function searchHandler(e) {
+	e.preventDefault()
+	// get the search input
+	let search = 
+  // convert the value in the input to lowercase
+  recipe.name.toLowerCase().includes(query)
+  // use the filter function to filter our recipes
+  filter(e)
+  // render the filtered list
+	const renderRecipes 
+}
+
+function init() {
+  // get a random recipe
+  const recipe = getRandomListEntry(recipes)
+  // render the recipe with renderRecipes.
+  renderRecipes([recipe]);
+}
+init();
