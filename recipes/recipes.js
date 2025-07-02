@@ -331,7 +331,7 @@ function ratingTemplate(rating) {
 	aria-label="Rating: ${rating} out of 5 stars"
 >`
 // our ratings are always out of 5, so create a for loop from 1 to 5
-	for (let index=0; i<=5; i++) {
+	for (let index=0; index<=5; index++) {
 		if (index <= rating) {
 			html += "⭐"
 		} else {
@@ -347,34 +347,30 @@ function ratingTemplate(rating) {
 
 function renderRecipes(recipeList) {
 	// get the element we will output the recipes into
-	const recipeContainer = `<section id="recipes">`
+	let recipeContainer = document.getElementById("#recipes")
 	// use the recipeTemplate function to transform our recipe objects into recipe HTML strings
 	for (const recipe of recipeList) {
 		recipeContainer += recipeTemplate(recipe)
 	};
-	
-	// Set the HTML strings as the innerHTML of our output element.
-	recipeContainer += `</section>`
+	recipeContainer.innerHTML
 }
 
-function filter(query) {
-	const filtered = recipes.filter(filterFunction)
+function filterList(search, recipes) {
 	// sort by name
-	const sorted = filtered.sort(sortFunction)
-		return sorted
-
+	const sorted = recipes.filter(recipe => recipe.name.includes(search))
+		return sorted;
 }
 
 function searchHandler(e) {
 	e.preventDefault()
 	// get the search input
-	let search = 
+	let search = document.getElementById("#search")
   // convert the value in the input to lowercase
-  recipe.name.toLowerCase().includes(query)
+  recipe.name.toLowerCase().includes(search)
   // use the filter function to filter our recipes
-  filter(e)
+  let filteredList = filterList(search, recipes)
   // render the filtered list
-	const renderRecipes 
+	renderRecipes(filteredList)
 }
 
 function init() {
