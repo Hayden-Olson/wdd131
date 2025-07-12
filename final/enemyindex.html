@@ -6,6 +6,7 @@
     <link rel="icon" type="image/x-icon" href="pictures/favicon-32x32.png">
     <title>Character Index</title>
     <link rel="stylesheet" href="index.css">
+    <script defer src="enemyindex.js"></script>
 </head>
 <body>
     <header>
@@ -20,15 +21,34 @@
         </nav>
     </header>
     <h1>Enemy Index</h1>
-    <main>
-        <div class="characters">
-
+    <main class="enemy_main">
+        <input type="text" placeholder="Search foes..">
+        <button class="search">Search!</button>
+        <div class="enemies">
+            <a href="javascript:void(0)" onclick="changeInfo(0)" >#1 Shot</a>
+            <a href="javascript:void(0)" onclick="changeInfo(1)" >#2 Bowler Shot</a>
+            <a href="javascript:void(0)" onclick="changeInfo(2)" >#3 Bubble Shot</a>
+            <a href="javascript:void(0)" onclick="changeInfo(3)" >#4 Sugar Shot</a>
+            <a href="javascript:void(0)" onclick="changeInfo(4)" >#5 Golden Shot</a>
+            <a href="javascript:void(0)" onclick="changeInfo(5)" >#6 Cannon Trooper</a>
+            <a href="javascript:void(0)" onclick="changeInfo(6)" >#7 Iron Trooper</a>
+            <a href="javascript:void(0)" onclick="changeInfo(7)" >#8 Hydro Trooper</a>
+            <a href="javascript:void(0)" onclick="changeInfo(8)" >#9 Candy Trooper</a>
+            <a href="javascript:void(0)" onclick="changeInfo(9)" >#10 Gold Trooper</a>
+            <a href="javascript:void(0)" onclick="changeInfo(10)" >#11 Stax</a>
+            <a href="javascript:void(0)" onclick="changeInfo(11)" >#12 Obelix</a>
+            
         </div>
-        <div class="character_stats">
-
+        <div class="enemy_portrait">
+            <h2 class="enemy_name"></h2>
+            <!-- put picture here -->
         </div>
-        <div class="character_description">
-
+        <div class="enemy_information">
+            <p class="enemy_health"></p>
+            <p class="enemy_defense"></p>
+            <p class="location"></p>
+            <p class="tags"></p>
+            <p class="enemy_description"></p>
         </div>
     </main>
     <footer>

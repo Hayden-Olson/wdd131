@@ -112,3 +112,7 @@ footer .social {
   justify-self: center;
   align-self: center;
 }
+
+.enemy-main {
+  display: grid;
+}
