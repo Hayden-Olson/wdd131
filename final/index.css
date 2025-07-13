@@ -37,6 +37,7 @@ h1, h2 {
   font-family: var(--heading-font);
   letter-spacing: 3px;
   padding: 0em 6em;
+  text-align: center;
 }
 #logo_link {
   max-height: 109.2px;
@@ -115,4 +116,68 @@ footer .social {
 
 .enemy-main {
   display: grid;
+  grid-template-columns: 1fr 2fr;
+}
+
+.enemies {
+  grid-column: 1/2;
+  border: 5px solid var(--accent2-color);
+}
+
+.enemy_picture {
+  width: 30%;
+}
+
+.enemy_portrait {
+  justify-items: center;
+}
+
+.selected_enemy {
+  grid-column: 2/3;
+  border: 5px solid var(--accent2-color);
+  font-family: var(--paragraph-font);
+  width: 80%;
+}
+
+.enemies {
+  width: 30%; /* Set a width if you like */
+  overflow: auto;
+  height: 500px;
+}
+
+.enemies a {
+  font-family: var(--paragraph-font);
+  background-color: var(--primary-color); /* Grey background color */
+  color: var(--accent2-color); /* Black text color */
+  display: block; /* Make the links appear below each other */
+  padding: 12px; /* Add some padding */
+  text-decoration: none; /* Remove underline from links */
+  border: 3px solid var(--secondary-color);
+}
+
+.enemies a:hover {
+  background-color: var(--secondary-color); /* Dark grey background on mouse-over */
+  color: var(--primary-color)
+}
+
+.enemies a.onclick {
+  background-color: #04AA6D; /* Add a green color to the "active/current" link */
+  color: white;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 20px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--secondary-color);
+  border-radius: 10px;
 }

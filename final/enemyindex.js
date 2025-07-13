@@ -42,7 +42,7 @@ const enemies = [
     {
         number: 5,
         name: 'Golden Shot',
-        image: '.pictures/Golden_Shot.png',
+        image: './pictures/Golden_Shot.png',
         health: 5,
         defense: '???',
         location: ['Cannon Canyon'],
