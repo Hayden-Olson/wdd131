@@ -36,7 +36,6 @@ body {
 h1, h2 {
   font-family: var(--heading-font);
   letter-spacing: 3px;
-  padding: 0em 6em;
   text-align: center;
 }
 #logo_link {
@@ -123,6 +122,7 @@ footer .social {
   grid-column: 1/2;
   border: 5px solid var(--accent2-color);
   justify-self: center;
+  align-self: center;
 }
 
 .enemy_picture {
@@ -139,12 +139,16 @@ footer .social {
 
 .enemy_information {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 2fr 1fr;
   grid-template-rows: 50px 50px 50px 50px 1fr;
 }
 
 .enemy_health, .enemy_defense, .location {
   grid-column: 1/2;
+}
+
+.location {
+  grid-row: 3/5;
 }
 
 .tags {
