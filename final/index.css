@@ -114,33 +114,58 @@ footer .social {
   align-self: center;
 }
 
-.enemy-main {
+.enemy_main {
   display: grid;
-  grid-template-columns: 1fr 2fr;
+  grid-template-columns: 1fr 1fr;
 }
 
 .enemies {
   grid-column: 1/2;
   border: 5px solid var(--accent2-color);
+  justify-self: center;
 }
 
 .enemy_picture {
-  width: 30%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 70%;
 }
 
 .enemy_portrait {
   justify-items: center;
+  border-bottom: 10px double var(--accent1-color)
+}
+
+.enemy_information {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 50px 50px 50px 50px 1fr;
+}
+
+.enemy_health, .enemy_defense, .location {
+  grid-column: 1/2;
+}
+
+.tags {
+  grid-column: 2/3;
+  grid-row: 1/5;
+
+text-align: end;}
+
+.enemy_description {
+  grid-column: 1/3;
 }
 
 .selected_enemy {
   grid-column: 2/3;
   border: 5px solid var(--accent2-color);
   font-family: var(--paragraph-font);
-  width: 80%;
+  padding: 10px;
 }
 
 .enemies {
-  width: 30%; /* Set a width if you like */
+  width: 50%; /* Set a width if you like */
   overflow: auto;
   height: 500px;
 }
@@ -172,7 +197,7 @@ footer .social {
 
 /* Track */
 ::-webkit-scrollbar-track {
-  box-shadow: inset 0 0 5px grey;
+  box-shadow: inset 0 0 5px var(--accent1-color);
   border-radius: 10px;
 }
 

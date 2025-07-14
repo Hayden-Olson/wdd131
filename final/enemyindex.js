@@ -141,8 +141,8 @@ const enemies = [
     },
     {
         number: 15,
-        name: 'Balleslasher',
-        image: './pictures/Balleslasher.png',
+        name: 'Battleblaster',
+        image: './pictures/Battleblaster.png',
         health: 30,
         defense: '5 / 0',
         location: ["Charleton's Cove","Jack's Place"],
