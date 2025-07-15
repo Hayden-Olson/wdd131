@@ -195,7 +195,7 @@ const enemies = [
         defense: 4,
         location: ["Charleton's Cove","Marvello's Castle"],
         tags: ['Dark','Ground','Creature','Enemy','Various'],
-        description: 'A bulky, manlike magical being that is covered in protective sports gear. It wears a tile on its head, so there is speculation of this creature being related to the baseman. It is capable of going under the stage tiles and performing various devious stage actions. Physical attacks from this foe will sap energy from the opponent, so guard well. Light elemental attacks not only pierce its defense, but also deal massive damage.'
+        description: 'A lanky, manlike magical being that resides in dark areas full of black magic. It wears a tile on its head, so there is speculation of this creature being related to the baseman. It is capable of going under the stage tiles and performing various devious stage actions. Physical attacks from this foe will sap energy from the opponent, so guard well. Light elemental attacks not only pierce its defense, but also deal massive damage.'
     },
     {
         number: 19,
