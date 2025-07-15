@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/x-icon" href="pictures/favicon-32x32.png">
     <title>Character Index</title>
+    <meta property="og:title" content="Enemy Index">
+    <meta property="og:type" content="website" />
+    <meta property="og:description" content="Displaying enemies from Mech Quest and information about them.">
     <link rel="stylesheet" href="index.css">
     <script defer src="enemyindex.js"></script>
 </head>
@@ -22,8 +25,11 @@
     </header>
     <h1>Enemy Index</h1>
     <main class="enemy_main">
-        <input type="text" placeholder="Search foes..">
-        <button class="search">Search!</button>
+        <div class="searchsection">
+            <input class="searchbar" type="text" placeholder="Search foes..">
+            <button class="searchbutton">Search!</button>
+        </div>
+        
         <div class="enemies">
             <a href="javascript:void(0)" onclick="changeInfo(0)" >#1 Shot</a>
             <a href="javascript:void(0)" onclick="changeInfo(1)" >#2 Bowler Shot</a>

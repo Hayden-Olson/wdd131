@@ -3,6 +3,7 @@ const enemies = [
         number: 1,
         name: 'Shot',
         image: './pictures/Shot.png',
+        alt: 'Image of a Shot',
         health: 1,
         defense: 0,
         location: ['Cannon Canyon', 'Various'],
@@ -13,6 +14,7 @@ const enemies = [
         number: 2,
         name: "Bowler Shot",
         image: './pictures/Bowler_Shot.png',
+        alt: 'Image of a Bowler Shot',
         health: 1,
         defense: 4,
         location: ["Cannon Castle"],
@@ -23,6 +25,7 @@ const enemies = [
         number: 3,
         name: "Bubble Shot",
         image: './pictures/Bubble_Shot.png',
+        alt: 'Image of a Bubble Shot',
         health: 4,
         defense: 0,
         location: ["Cavity Falls"],
@@ -33,6 +36,7 @@ const enemies = [
         number: 4,
         name: 'Sugar Shot',
         image: './pictures/Sugar_Shot.png',
+        alt: 'Image of a Sugar Shot',
         health: 3,
         defense: 0,
         location: ['Candy Woods'],
@@ -43,6 +47,7 @@ const enemies = [
         number: 5,
         name: 'Golden Shot',
         image: './pictures/Golden_Shot.png',
+        alt: 'Image of a Golden Shot',
         health: 5,
         defense: '???',
         location: ['Cannon Canyon'],
@@ -53,6 +58,7 @@ const enemies = [
         number: 6,
         name: 'Cannon Trooper',
         image: './pictures/Cannon_Trooper.png',
+        alt: 'Image of a Cannon Trooper',
         health: 4,
         defense: 0,
         location: ['Cannon Canyon', 'Various'],
@@ -63,6 +69,7 @@ const enemies = [
         number: 7,
         name: 'Iron Trooper',
         image: './pictures/Iron_Trooper.png',
+        alt: 'Image of a Iron Trooper',
         health: 2,
         defense: 4,
         location: ['Cannon Castle'],
@@ -73,6 +80,7 @@ const enemies = [
         number: 8,
         name: 'Hydro Trooper',
         image: './pictures/Hydro_Trooper.png',
+        alt: 'Image of a Hydro Trooper',
         health: 8,
         defense: 0,
         location: ['Cavity Falls','Various'],
@@ -83,6 +91,7 @@ const enemies = [
         number: 9,
         name: 'Candy Trooper',
         image: './pictures/Candy_Trooper.png',
+        alt: 'Image of a Candy Trooper',
         health: 7,
         defense: 0,
         location: ['Candy Woods'],
@@ -93,6 +102,7 @@ const enemies = [
         number: 10,
         name: 'Gold Trooper',
         image: './pictures/Gold_Trooper.png',
+        alt: 'Image of a Gold Trooper',
         health: 20,
         defense: '???',
         location: ['Cannon Canyon'],
@@ -103,6 +113,7 @@ const enemies = [
         number: 11,
         name: 'Stax',
         image: './pictures/Stax.png',
+        alt: 'Image of a Stax',
         health: 6,
         defense: 0,
         location: ['Cannon Canyon'],
@@ -113,6 +124,7 @@ const enemies = [
         number: 12,
         name: 'Obelix',
         image: './pictures/Obelix.png',
+        alt: 'Image of a Obelix',
         health: 12,
         defense: 1,
         location: ['Wasteland'],
@@ -123,6 +135,7 @@ const enemies = [
         number: 13,
         name: 'Jax',
         image: './pictures/Jax.png',
+        alt: 'Image of a Jax',
         health: 25,
         defense: 2,
         location: ["Charleton's Cove","Jack's Place"],
@@ -133,6 +146,7 @@ const enemies = [
         number: 14,
         name: 'Balleblaster',
         image: './pictures/Balleblaster.png',
+        alt: 'Image of a Balleblaster',
         health: 10,
         defense: '1 / 0',
         location: ['Cannon Canyon'],
@@ -143,6 +157,7 @@ const enemies = [
         number: 15,
         name: 'Battleblaster',
         image: './pictures/Battleblaster.png',
+        alt: 'Image of a Battleblaster',
         health: 30,
         defense: '5 / 0',
         location: ["Charleton's Cove","Jack's Place"],
@@ -153,6 +168,7 @@ const enemies = [
         number: 16,
         name: 'Birdy',
         image: './pictures/Birdy.png',
+        alt: 'Image of a Birdy',
         health: 2,
         defense: 0,
         location: ['Cannon Canyon'],
@@ -163,6 +179,7 @@ const enemies = [
         number: 17,
         name: 'Baseman',
         image: './pictures/Baseman.png',
+        alt: 'Image of a Baseman',
         health: 7,
         defense: 0,
         location: ['Cannon Canyon'],
@@ -173,6 +190,7 @@ const enemies = [
         number: 18,
         name: 'Umpire',
         image: './pictures/Umpire.png',
+        alt: 'Image of an Umpire',
         health: 21,
         defense: 4,
         location: ["Charleton's Cove","Marvello's Castle"],
@@ -183,6 +201,7 @@ const enemies = [
         number: 19,
         name: 'Crasher',
         image: './pictures/Crasher.png',
+        alt: 'Image of Crasher',
         health: '15 | 30',
         defense: 0,
         location: ['Cannon Town','Wasteland'],
@@ -193,6 +212,7 @@ const enemies = [
         number: 20,
         name: 'Pug',
         image: './pictures/Pug.png',
+        alt: 'Image of Pug',
         health: 24,
         defense: 0,
         location: ['Wasteland'],
@@ -203,6 +223,7 @@ const enemies = [
         number: 21,
         name: "Thug",
         image: "./pictures/Thug.png",
+        alt: 'Image of Thug',
         health: 35,
         defense: 1,
         location: ['Wasteland'],
@@ -213,6 +234,7 @@ const enemies = [
         number: 22,
         name: "Tank Trooper",
         image: './pictures/Tank_Trooper.png',
+        alt: 'Image of a Tank Trooper',
         health: 100,
         defense: 4,
         location: ['Cannon Castle',"Marvello's Castle"],
@@ -223,6 +245,7 @@ const enemies = [
         number: 23,
         name: 'King Cannon the Marvelous',
         image: './pictures/King_Cannon_the_Marvelous.png',
+        alt: 'Image of King Cannon the Marvelous',
         health: 120,
         defense: 2,
         location: ['Cannon Castle'],
@@ -233,6 +256,7 @@ const enemies = [
         number: 24,
         name: 'King Cannon the Usurper',
         image: './pictures/King_Cannon_the_Usurper.png',
+        alt: 'Image of King Cannon the Usurper',
         health: 120,
         defense: 2,
         location: ["Charleton's Cove"],
@@ -243,6 +267,7 @@ const enemies = [
         number: 25,
         name: 'Pirate',
         image: './pictures/Pirate.png',
+        alt: 'Image of a Pirate',
         health: 5,
         defense: 0,
         location: ['Cavity Falls'],
@@ -253,6 +278,7 @@ const enemies = [
         number: 26,
         name: 'Captain Marlin',
         image: './pictures/Captain_Marlin.png',
+        alt: 'Image of Captain Marlin',
         health: 20,
         defense: 0,
         location: ['Cavity Falls'],
@@ -263,6 +289,7 @@ const enemies = [
         number: 27,
         name: 'Mecha Marlin',
         image: './pictures/Mecha_Marlin.png',
+        alt: 'Image of Mecha Marlin',
         health: 30,
         defense: 1,
         location: ["Marlin's Tower"],
@@ -273,6 +300,7 @@ const enemies = [
         number: 28,
         name: 'Cider',
         image: './pictures/Cider.png',
+        alt: 'Image of a Cider',
         health: 6,
         defense: 0,
         location: ["Candy Woods"],
@@ -283,6 +311,7 @@ const enemies = [
         number: 29,
         name: 'Sugar Sprite',
         image: './pictures/Sugar_Sprite.png',
+        alt: 'Image of a Sugar Sprite',
         health: 5,
         defense: 0,
         location: ['Candy Woods'],
@@ -293,6 +322,7 @@ const enemies = [
         number: 30,
         name: 'Sugar Shinobi',
         image: './pictures/Sugar_Shinobi.png',
+        alt: 'Image of a Sugar Shinobi',
         health: 15,
         defense: 0,
         location: ['Candy Woods'],
@@ -303,6 +333,7 @@ const enemies = [
         number: 31,
         name: 'Lichibald',
         image: './pictures/Lichibald.png',
+        alt: 'Image of Lichibald',
         health: 176,
         defense: 0,
         location: ['Candy Woods'],
@@ -313,6 +344,7 @@ const enemies = [
         number: 32,
         name: 'Shredder',
         image: './pictures/Enemy_Shredder.png',
+        alt: 'Image of Shredder',
         health: 100,
         defense: 0,
         location: ['Candy Woods'],
@@ -323,6 +355,7 @@ const enemies = [
         number: 33,
         name: 'Candymecha',
         image: './pictures/Candymecha.png',
+        alt: 'Image of a Candymecha',
         health: 27,
         defense: 1,
         location: ['Abandoned Base'],
@@ -333,6 +366,7 @@ const enemies = [
         number: 34,
         name: 'Stakataka',
         image: './pictures/Stakataka.png',
+        alt: 'Image of a Stakataka',
         health: 10,
         defense: 1,
         location: ['Candy Woods'],
@@ -343,6 +377,7 @@ const enemies = [
         number: 35,
         name: 'Sugabooga',
         image: './pictures/Sugabooga.png',
+        alt: 'Image of Sugabooga',
         health: 50,
         defense: 0,
         location: ['Candy Woods'],
@@ -352,7 +387,7 @@ const enemies = [
 ]
 
 // Now this sets the enemy portrait
-function displayPicture(enemyName, indexNumber, enemyPortrait) {
+function displayPicture(enemyName, indexNumber, enemyPortrait, enemyAlt) {
     let oldpicture = document.querySelector(".enemy_picture");
     if (oldpicture) {
         oldpicture.remove();
@@ -363,6 +398,7 @@ function displayPicture(enemyName, indexNumber, enemyPortrait) {
     let picture = document.createElement("img");
     picture.classList.add("enemy_picture");
     picture.src = enemyPortrait;
+    picture.alt = enemyAlt;
     let div = document.querySelector(".enemy_portrait");
     div.appendChild(picture);
 }
@@ -394,6 +430,7 @@ function changeInfo(number) {
     let enemyName = enemies[number].name;
     let indexNumber = enemies[number].number;
     let enemyPortrait = enemies[number].image;
+    let enemyAlt = enemies[number].alt;
 
     // Getting the needed information for enemy_information
 
@@ -405,7 +442,7 @@ function changeInfo(number) {
 
     // Call the display functions
 
-    displayPicture(enemyName, indexNumber, enemyPortrait);
+    displayPicture(enemyName, indexNumber, enemyPortrait, enemyAlt);
     displayInformation(enemyHealth, enemyDefense, enemyLocation, enemyTags, enemyDescription);
 
 }
