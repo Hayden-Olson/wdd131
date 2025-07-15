@@ -248,3 +248,18 @@ text-align: end;}
   background: var(--secondary-color);
   border-radius: 10px;
 }
+
+/* Character Index CSS */
+
+.character_main img {
+  width: 60%;
+}
+
+.character_main {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.flippanel {
+  grid-column: 2/3;
+}
