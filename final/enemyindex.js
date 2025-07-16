@@ -386,6 +386,59 @@ const enemies = [
     }
 ]
 
+// ...existing enemies array and display functions...
+
+// Generate enemy links dynamically
+const enemiesDiv = document.querySelector('.enemies');
+function listFill(givenlist) {
+    enemiesDiv.innerHTML = givenlist.map((enemy) =>
+  enemyLinkTemplate(enemy)
+).join('');
+
+}
+
+function enemyLinkTemplate(enemy) {
+    return `<a href="#" data-index="${enemy.number - 1}" aria-label="Show info for ${enemy.name}">#${enemy.number} ${enemy.name}</a>`
+}
+
+const searchbar = document.querySelector('.searchbar');
+const searchbutton = document.querySelector('.searchbutton');
+
+function filterList(search) {
+	// sort by tags
+	const sorted = enemies.filter(enemy => enemy.tags.includes(capitalize(search)) || enemy.location.includes(capitalize(search)));
+	listFill(sorted);
+}
+
+function capitalize(str) {
+    if (!str) return "";
+    return str
+        .split(" ")
+        .map(word => word[0].toUpperCase() + word.slice(1).toLowerCase())
+        .join(" ");
+}
+
+searchbutton.addEventListener('click', function(e) {
+    e.preventDefault();
+    filterList(searchbar.value);
+});
+searchbar.addEventListener('change', function() {
+    let searchQuery = [];
+    filterList(searchbar.value);
+    if (searchbar.value == '') {
+        listFill(enemies);
+    }
+});
+
+// Use event delegation for click handling
+enemiesDiv.addEventListener('click', function(e) {
+  if (e.target.tagName === 'A') {
+    e.preventDefault();
+    const index = parseInt(e.target.getAttribute('data-index'));
+    changeInfo(index);
+  }
+});
+
 // Now this sets the enemy portrait
 function displayPicture(enemyName, indexNumber, enemyPortrait, enemyAlt) {
     let oldpicture = document.querySelector(".enemy_picture");
@@ -447,7 +500,6 @@ function changeInfo(number) {
 
 }
 
-// User input is tracked here
-//function enemySelect()
-
+// Default page load.
+listFill(enemies)
 changeInfo(0);
