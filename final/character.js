@@ -161,6 +161,7 @@ function setStats(name,title,health,attack,defense,sA,sD,speed) {
 function generatePictures() {
     let charImage = characters[number].image;
     let charAlt = characters[number].alt;
+    
 }
 
 function changeInfo(name) {

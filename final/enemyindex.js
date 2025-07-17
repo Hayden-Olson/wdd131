@@ -405,9 +405,19 @@ const searchbar = document.querySelector('.searchbar');
 const searchbutton = document.querySelector('.searchbutton');
 
 function filterList(search) {
-	// sort by tags
-	const sorted = enemies.filter(enemy => enemy.tags.includes(capitalize(search)) || enemy.location.includes(capitalize(search)));
-	listFill(sorted);
+    // Split input by commas, trim, and capitalize each term
+    const terms = search.split(',')
+        .map(s => capitalize(s.trim()))
+        .filter(Boolean);
+
+    // Filter enemies if any tag or location matches any term
+    const sorted = enemies.filter(enemy =>
+        terms.some(term =>
+            enemy.tags.includes(term) ||
+            enemy.location.map(capitalize).includes(term)
+        )
+    );
+    listFill(sorted);
 }
 
 function capitalize(str) {
@@ -423,10 +433,10 @@ searchbutton.addEventListener('click', function(e) {
     filterList(searchbar.value);
 });
 searchbar.addEventListener('change', function() {
-    let searchQuery = [];
-    filterList(searchbar.value);
     if (searchbar.value == '') {
         listFill(enemies);
+    } else {
+        filterList(searchbar.value);
     }
 });
 
