@@ -406,9 +406,7 @@ const searchbutton = document.querySelector('.searchbutton');
 
 function filterList(search) {
     // Split input by commas, trim, and capitalize each term
-    const terms = search.split(',')
-        .map(s => capitalize(s.trim()))
-        .filter(Boolean);
+    const terms = search.split(',').map(s => capitalize(s.trim())).filter(Boolean);
 
     // Filter enemies if any tag or location matches any term
     const sorted = enemies.filter(enemy =>
@@ -422,15 +420,16 @@ function filterList(search) {
 
 function capitalize(str) {
     if (!str) return "";
-    return str
-        .split(" ")
-        .map(word => word[0].toUpperCase() + word.slice(1).toLowerCase())
-        .join(" ");
+    return str.split(" ").map(word => word[0].toUpperCase() + word.slice(1).toLowerCase()).join(" ");
 }
 
 searchbutton.addEventListener('click', function(e) {
     e.preventDefault();
-    filterList(searchbar.value);
+    if (searchbar.value == '') {
+        listFill(enemies);
+    } else {
+        filterList(searchbar.value);
+    }
 });
 searchbar.addEventListener('change', function() {
     if (searchbar.value == '') {

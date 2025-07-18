@@ -121,9 +121,10 @@ const characters = [
 
 
 function statStars(number){
+    let html = '';
     for (let index=0; index<=10; index++) {
 		if (index <= number) {
-			html += "⭐"
+			html += "★"
 		} else {
 			html += "☆"
 		}
@@ -158,32 +159,48 @@ function setStats(name,title,health,attack,defense,sA,sD,speed) {
     <p>${charSpeed}</p>`;
 }
 
-function generatePictures() {
-    let charImage = characters[number].image;
-    let charAlt = characters[number].alt;
+function generatePictures(index) {
+    let charImage = characters[index].image;
+    let charAlt = characters[index].alt;
+    let picture = document.createElement("img");
+    picture.classList.add("character_picture");
+    picture.src = charImage;
+    picture.alt = charAlt;
+    let imagewheel = document.querySelector('.characters');
+    characters.forEach(character => {
+        imagewheel.appendChild(character.picture);
+    });
     
 }
 
-function changeInfo(name) {
+function changeInfo(index) {
+
 
     // Front side of the box.
 
-    let charName = characters[name].name;
-    let charTitle = characters[name].title;
-    let charHealth = characters[name].title;
-    let charAttack = characters[name].attack;
-    let charDefense = characters[name].defense;
-    let charSA = characters[name].specialAttack;
-    let charSD = characters[name].specialDefense;
-    let charSpeed = characters[name].speed;
+    let charName = characters[index].name;
+    let charTitle = characters[index].title;
+    let charHealth = characters[index].title;
+    let charAttack = characters[index].attack;
+    let charDefense = characters[index].defense;
+    let charSA = characters[index].specialAttack;
+    let charSD = characters[index].specialDefense;
+    let charSpeed = characters[index].speed;
     setStats(charName,charTitle,charHealth,charAttack,charDefense,charSA,charSD,charSpeed);
     
     // Back side of the box.
 
-    let charDescript = characters[number].description;
+    let charDescript = characters[index].description;
     setDescription(charDescript);
 }
+
+function blockToggle(object1,object2) {
+    object1.style.visibility="hidden";
+    object2.style.visibility="visible";
+}
+
 
 // Default page load.
 
 changeInfo(0);
+generatePictures(0);

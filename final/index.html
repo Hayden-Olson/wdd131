@@ -6,6 +6,7 @@
     <link rel="icon" type="image/x-icon" href="pictures/favicon-32x32.png">
     <title>Character Index</title>
     <link rel="stylesheet" href="index.css">
+    <script defer src="character.js"></script>
 </head>
 <body>
     <header>
@@ -21,15 +22,23 @@
     </header>
     <h1>Character Index</h1>
     <main class="character_main">
-        <div class="characters">
+        <div class="carousel">
+            <div class="characters">
             
-        </div>
-        <div class="flippanel">
-            <div class="character_stats">
-                <h2>Character Stats</h2>
             </div>
-            <div class="character_description">
-                <h2>Character Description</h2>
+            <div class="buttons">
+                <button class="left">◄</button>
+                <button class="right">►</button>
+            </div>
+        </div>
+        <div class="flip-card">
+            <div class="flip-card-inner">
+                <div class="flip-card-front character_stats">
+                    <h2>Character Stats</h2>
+                </div>
+                <div class="flip-card-back character_description">
+                    <h2>Character Description</h2>
+                </div>
             </div>
         </div>
         
