@@ -124,21 +124,23 @@ flipper.addEventListener('click', () => {
     flipper.classList.toggle('flipped');
 });
 
-const button = document.querySelector("button");
+
+const buttonleft = document.querySelector(".left");
+const buttonright = document.querySelector(".right");
 let currentIndex = 0;
-button.addEventListener('click', () => {
-    
-    if (button.className == '.left') {
-        currentIndex--;
-        if (currentIndex == -1)
-            currentIndex = characters.length - 1;
-        changeInfo(currentIndex);
-    } else if (button.className == '.right') {
-        currentIndex++;
-        if (currentIndex == characters.length)
-            currentIndex = 0;
-        changeInfo(currentIndex);
-    }
+
+buttonleft.addEventListener('click', () => {
+    currentIndex--;
+    if (currentIndex == -1)
+        currentIndex = characters.length - 1;
+    changeInfo(currentIndex);
+})
+
+buttonright.addEventListener('click', () => {
+    currentIndex++;
+    if (currentIndex == characters.length)
+        currentIndex = 0;
+    changeInfo(currentIndex);
 })
 
 // Places the stars for each stat. Amount of filled stars is equal to the given number in their stat.
@@ -186,7 +188,7 @@ function setStats(name,title,health,attack,defense,sA,sD,speed) {
     <p>${charSpeed}</p>`;
 }
 
-
+// This function will create and display three images for the page.
 function generatePictures(index) {
     let charImage1 = characters[index].image;
     let charAlt1 = characters[index].alt;
