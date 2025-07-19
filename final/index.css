@@ -262,6 +262,9 @@ text-align: end;}
 
 .carousel {
   grid-column: 1/2;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  padding: 20px;
 }
 
 .left, .right {
@@ -274,21 +277,25 @@ text-align: end;}
   text-decoration: none;
   display: inline-block;
   font-size: 32px;
+  z-index: 5;
 }
 
 .buttons {
   display: flex;
   justify-content: space-between;
+  grid-row: 2/3;
+  align-self: end;
 }
 
 /* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
 .flip-card {
   background-color: transparent;
-  width: 90%;
+  width: 80%;
   height: 500px;
   perspective: 1000px; /* Remove this if you don't want the 3D effect */
   grid-column: 2/3;
   margin: 20px;
+  justify-self: center;
 }
 
 /* This container is needed to position the front and back side */
@@ -340,13 +347,47 @@ p {
 
 /* Character Index picture wheel */
 .characters {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+ 
+}
+
+.characters img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  position: absolute;
+}
+
+.characters div {
+  width: 150%;
   display: flex;
+  justify-content: end;
 }
 
 .characters .smallerpic {
-  width: 10%;
+  z-index: -1;
+  width: 30%;
+  opacity: 40%;
 }
 
 .characters .mainpic {
+  z-index: 2;
+  width: 50%;
+  left: 15px;
+}
 
+.characters .image3 {
+  grid-column: 1/2;
+  z-index: 1;
+  left: 50px;
+}
+
+.characters .image1 {
+  grid-column: 2/3;
+}
+
+.characters .image2 {
+  grid-column: 3/4;
+  z-index: 1;
 }

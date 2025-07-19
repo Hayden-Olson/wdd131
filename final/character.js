@@ -39,7 +39,7 @@ const characters = [
         description: "A timid Willow who wants to be useful. In spite of his intelligence, he often doubts himself. Is the main magic caster in the group, being able to cast a wide variety of elemental attacks with potent power. He originally joins Rocket to find his friend Dec in the Candy Woods, who entered and never returned. After losing everyone else in his village, he stays with Rocket in hopes of finding his people and freeing them. Hopefully, he can find more courage and self-confidence along the way."
     },
     {
-        name: 'Dec Tective',
+        name: '"Dec" "Tective"',
         title: "Inventive Artificer",
         health: 4,
         attack: 4,
@@ -226,10 +226,16 @@ function generatePictures(index) {
     picture3.className = "smallerpic";
 
     let carosel = document.querySelector(".characters");
+    let image3 = document.createElement("div");
+    let image1 = document.createElement("div");
+    let image2 = document.createElement("div");
     carosel.innerHTML = ""; // clear previous content
-    carosel.appendChild(picture3);
-    carosel.appendChild(picture1);
-    carosel.appendChild(picture2);
+    carosel.appendChild(image3);
+    carosel.appendChild(image1);
+    carosel.appendChild(image2);
+    image3.appendChild(picture3);
+    image1.appendChild(picture1);
+    image2.appendChild(picture2);
 }
 
 // Changes the displayed character information when a button is pressed.
