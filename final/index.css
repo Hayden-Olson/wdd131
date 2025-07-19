@@ -281,16 +281,14 @@ text-align: end;}
   justify-content: space-between;
 }
 
-.flippanel {
-  grid-column: 2/3;
-}
-
 /* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
 .flip-card {
   background-color: transparent;
   width: 90%;
   height: 500px;
   perspective: 1000px; /* Remove this if you don't want the 3D effect */
+  grid-column: 2/3;
+  margin: 20px;
 }
 
 /* This container is needed to position the front and back side */
@@ -303,7 +301,7 @@ text-align: end;}
   transform-style: preserve-3d;
 }
 
-/* Do an horizontal flip when you move the mouse over the flip box container */
+/* Do an horizontal flip when you click on the flip box container */
 .flip-card.flipped .flip-card-inner {
   transform: rotateY(180deg);
 }
@@ -315,18 +313,27 @@ text-align: end;}
   height: 100%;
   -webkit-backface-visibility: hidden; /* Safari */
   backface-visibility: hidden;
+  padding: 10px;
 }
 
 /* Style the front side (fallback if image is missing) */
 .flip-card-front {
-  background-color: #bbb;
-  color: black;
+  background-color: var(--accent1-color);
+  color: var(--primary-color);
 }
 
 /* Style the back side */
 .flip-card-back {
-  background-color: dodgerblue;
-  color: white;
+  background-color: var(--accent2-color);
+  color: var(--primary-color);
   transform: rotateY(180deg);
 }
 
+h2, h3, h4 {
+  font-family: var(--heading-font);
+  letter-spacing: 1px;
+}
+
+p {
+  font-family: var(--paragraph-font);
+}
