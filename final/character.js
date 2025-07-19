@@ -187,19 +187,54 @@ function setStats(name,title,health,attack,defense,sA,sD,speed) {
 }
 
 
-function generatePictures() {
-    let charImage = characters[index].image;
-    let charAlt = characters[index].alt;
-    let picture = document.createElement("img");
-    picture.classList.add("character_picture");
-    picture.src = charImage;
-    picture.alt = charAlt;
+function generatePictures(index) {
+    let charImage1 = characters[index].image;
+    let charAlt1 = characters[index].alt;
+    let picture1 = document.createElement("img");
+    picture1.src = charImage1;
+    picture1.alt = charAlt1;
+    picture1.className = "mainpic";
 
+    let index2;
+    if (index == characters.length - 1) {
+        index2 = 0;
+    } else {
+        index2 = index + 1;
+    }
     
+    let charImage2 = characters[index2].image;
+    let charAlt2 = characters[index2].alt;
+    let picture2 = document.createElement("img");
+    picture2.src = charImage2;
+    picture2.alt = charAlt2;
+    picture2.className = "smallerpic";
+
+    let index3;
+    if (index == 0) {
+        index3 = characters.length - 1;
+    } else {
+        index3 = index - 1;
+    }
+    
+    let charImage3 = characters[index3].image;
+    let charAlt3 = characters[index3].alt;
+    let picture3 = document.createElement("img");
+    picture3.src = charImage3;
+    picture3.alt = charAlt3;
+    picture3.className = "smallerpic";
+
+    let carosel = document.querySelector(".characters");
+    carosel.innerHTML = ""; // clear previous content
+    carosel.appendChild(picture3);
+    carosel.appendChild(picture1);
+    carosel.appendChild(picture2);
 }
 
 // Changes the displayed character information when a button is pressed.
 function changeInfo(index) {
+
+    // Generate the three images.
+    generatePictures(index);
 
     // Front side of the box.
 
