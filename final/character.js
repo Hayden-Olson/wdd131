@@ -60,7 +60,7 @@ const characters = [
         specialAttack: 10,
         specialDefense: 10,
         speed: 1,
-        image: './pictures/Norman_guy.png',
+        image: './pictures/Norman_Guy.png',
         alt: 'Image of Norman Guy',
         description: "Rex and Dec join forces to create this wobbly persona, 'Guy Norman'. This disguise helps guard them from the eyes of SKIES and allows them to explore freely. Rex does his best to fix Dec's deductions while Dec says whatever is on his mind. Luckily, Dec can talk his way out of situations he puts himself in. In combat, this combines the duo's stats to help improve their chance of staying up in the field. They attack together, dealing much more damage together. The only issue is moving around in combat is a bit wonky. It IS two willows in a trenchcoat after all."
     },
