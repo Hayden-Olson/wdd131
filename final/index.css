@@ -395,3 +395,17 @@ p {
   grid-column: 3/4;
   z-index: 1;
 }
+
+.note1 {
+  justify-self: center;
+  grid-column: 1/2;
+  margin: 0;
+  margin-top: 20px;
+}
+
+.note2 {
+  justify-self: center;
+  grid-column: 2/3;
+  margin: 0;
+  margin-top: 20px;
+}
