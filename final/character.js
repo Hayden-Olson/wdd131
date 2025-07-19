@@ -240,7 +240,7 @@ function changeInfo(index) {
 
     let charName = characters[index].name;
     let charTitle = characters[index].title;
-    let charHealth = characters[index].title;
+    let charHealth = characters[index].health;
     let charAttack = characters[index].attack;
     let charDefense = characters[index].defense;
     let charSA = characters[index].specialAttack;
