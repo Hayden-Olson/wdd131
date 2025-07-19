@@ -337,3 +337,16 @@ h2, h3, h4 {
 p {
   font-family: var(--paragraph-font);
 }
+
+/* Character Index picture wheel */
+.characters {
+  display: flex;
+}
+
+.characters .smallerpic {
+  width: 10%;
+}
+
+.characters .mainpic {
+
+}
