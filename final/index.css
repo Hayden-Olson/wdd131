@@ -25,12 +25,14 @@
   --nav-hover-link-color: #35F0D0;
   --nav-hover-background-color: var(--primary-color);
 }
+
 body {
   background-color: var(--primary-color);
   color: var(--paragraph-color-on-color);
   font-size: 22px;
   padding: 0;
   margin: 0;
+  max-width: 1509px;
 }
 
 h1, h2 {
