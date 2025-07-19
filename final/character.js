@@ -146,7 +146,7 @@ buttonright.addEventListener('click', () => {
 // Places the stars for each stat. Amount of filled stars is equal to the given number in their stat.
 function statStars(number){
     let html = '';
-    for (let index=0; index<=10; index++) {
+    for (let index=0; index<10; index++) {
 		if (index <= number) {
 			html += "★"
 		} else {
