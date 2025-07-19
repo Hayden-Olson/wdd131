@@ -118,8 +118,30 @@ const characters = [
     }
 ]
 
+// This function toggles a css query that handles the flipping of the card. Instead of hovering, I wanted the card to only flip on click.
+const flipper = document.querySelector(".flip-card");
+flipper.addEventListener('click', () => {
+    flipper.classList.toggle('flipped');
+});
 
+const button = document.querySelector("button");
+let currentIndex = 0;
+button.addEventListener('click', () => {
+    
+    if (button.className == '.left') {
+        currentIndex--;
+        if (currentIndex == -1)
+            currentIndex = characters.length - 1;
+        changeInfo(currentIndex);
+    } else if (button.className == '.right') {
+        currentIndex++;
+        if (currentIndex == characters.length)
+            currentIndex = 0;
+        changeInfo(currentIndex);
+    }
+})
 
+// Places the stars for each stat. Amount of filled stars is equal to the given number in their stat.
 function statStars(number){
     let html = '';
     for (let index=0; index<=10; index++) {
@@ -129,15 +151,19 @@ function statStars(number){
 			html += "☆"
 		}
 	}
+    return html;
 }
 
-
+// Creates and places the character description onto the back of the card.
 function setDescription(description) {
     let charDescript = `${description}`;
     let backbox = document.querySelector(".character_description");
-    backbox.textContent = charDescript;
+    backbox.innerHTML = `
+    <h2>Character Description</h2>
+    <p>${charDescript}</p>`;
 }
 
+// Creates and places the character stats onto the front of the card.
 function setStats(name,title,health,attack,defense,sA,sD,speed) {
     let frontbox = document.querySelector(".character_stats");
     let charName = `${name}`;
@@ -148,7 +174,8 @@ function setStats(name,title,health,attack,defense,sA,sD,speed) {
     let charSA = `Special Attack: ${statStars(sA)}`;
     let charSD = `Special Defense: ${statStars(sD)}`;
     let charSpeed = `Speed: ${statStars(speed)}`;
-    frontbox.textContent = `
+    frontbox.innerHTML = `
+    <h2>Character Stats</h2>
     <h3>${charName}</h3>
     <h4>${charTitle}</h4>
     <p>${charHealth}</p>
@@ -159,22 +186,20 @@ function setStats(name,title,health,attack,defense,sA,sD,speed) {
     <p>${charSpeed}</p>`;
 }
 
-function generatePictures(index) {
+
+function generatePictures() {
     let charImage = characters[index].image;
     let charAlt = characters[index].alt;
     let picture = document.createElement("img");
     picture.classList.add("character_picture");
     picture.src = charImage;
     picture.alt = charAlt;
-    let imagewheel = document.querySelector('.characters');
-    characters.forEach(character => {
-        imagewheel.appendChild(character.picture);
-    });
+
     
 }
 
+// Changes the displayed character information when a button is pressed.
 function changeInfo(index) {
-
 
     // Front side of the box.
 
@@ -194,13 +219,7 @@ function changeInfo(index) {
     setDescription(charDescript);
 }
 
-function blockToggle(object1,object2) {
-    object1.style.visibility="hidden";
-    object2.style.visibility="visible";
-}
-
-
 // Default page load.
 
 changeInfo(0);
-generatePictures(0);
+generatePictures();
